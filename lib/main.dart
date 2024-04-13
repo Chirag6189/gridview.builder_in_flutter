@@ -90,8 +90,10 @@ class MyApp extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Container(
-            height: 117,
+          Expanded(
+            flex: 2,
+            child: Container(
+            ),
           ),
           Expanded(
               child: Container(
