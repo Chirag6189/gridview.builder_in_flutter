@@ -78,4 +78,42 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  Widget make_container(int index){
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.blue,
+        image: DecorationImage(
+          image: AssetImage(image[index]),
+          fit: BoxFit.cover
+        ),
+      ),
+      child: Column(
+        children: [
+          Container(
+            height: 117,
+          ),
+          Expanded(
+              child: Container(
+                width: double.maxFinite,
+                padding: EdgeInsets.only(left: 20),
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(title[index],style: TextStyle(color: Colors.white70,fontWeight: FontWeight.bold,fontSize: 15),),
+                    Text(subtitle[index],style: TextStyle(color: Colors.white70,fontWeight: FontWeight.bold,fontSize: 15),),
+                  ],
+                ),
+              )
+          )
+        ],
+      ),
+    );
+  }
+
 }
